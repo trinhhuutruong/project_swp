@@ -18,14 +18,10 @@ public class DBConnect {
     public static Connection makeConnection(){
         try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-
             String sql = "jbdc:sqlserver://localhost:1433;databaseName=Q_ANT";
-
-            Connection con = DriverManager.getConnection(sql, "sa", "0977321640");
+            Connection con = DriverManager.getConnection(sql, "sa", "123456");
             return con;
-        } catch (SQLException e){
-            e.printStackTrace();
-        } catch(ClassNotFoundException e){
+        } catch (SQLException | ClassNotFoundException e){
             e.printStackTrace();
         }
             return null;
