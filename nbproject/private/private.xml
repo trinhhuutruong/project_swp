@@ -6,5 +6,16 @@
             <file>file:/C:/Users/Admin/OneDrive/Máy%20tính/Kỳ%205/SWP/Tiem_Cam_Do/web/homePage.jsp</file>
             <file>file:/C:/Users/Admin/OneDrive/Máy%20tính/Kỳ%205/SWP/Tiem_Cam_Do/src/java/servlet/LoginServlet.java</file>
         </group>
+        <group name="Semester 4">
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/servlet/ConfirmRecoverPassword.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dto/ItemDTO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dao/StaffDAO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dto/CustomerDTO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dao/KeyDAO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dto/BillDTO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dto/KeyDTO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dao/PawnShopDAO.java</file>
+            <file>file:/D:/FPT/Semester%205/SWP391/project_swp/src/java/dto/StaffDTO.java</file>
+        </group>
     </open-files>
 </project-private>
