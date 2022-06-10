@@ -6,7 +6,9 @@
 package dao;
 
 import dto.CustomerDTO;
+import dto.ItemDTO;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -18,7 +20,7 @@ import utils.DBConnect;
  *
  * @author User
  */
-public class CustomerDAO {
+public class ItemDAO {
     Connection con = null;
     PreparedStatement stm = null;
     ResultSet rs = null;
@@ -27,22 +29,26 @@ public class CustomerDAO {
     private final String UPDATE = "UPDATE tblStaff set password = ?, fullName = ? , storeID = ? WHERE staffID = ? ;";
     private final String DELETE = "DELETE FROM tblStaff WHERE staffID = ? ";
 
-    public List<CustomerDTO> viewCustomer() throws SQLException, ClassNotFoundException {
-        List<CustomerDTO> cusList = null;
+    public List<ItemDTO> viewItem() throws SQLException, ClassNotFoundException {
+        List<ItemDTO> itemList = null;
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
-                stm = con.prepareStatement("Select * from tblCustomer");
+                stm = con.prepareStatement("Select * from tblItem");
                 rs = stm.executeQuery();
                 while (rs.next()) {
-                    if (cusList== null){
-                        cusList = new ArrayList<>();
+                    if (itemList== null){
+                        itemList = new ArrayList<>();
                     }
+                    int itemID = rs.getInt("itemID");
+                    String itemName = rs.getString("itemName");
+                    String itemPic = rs.getString("itemPic");
                     String customerID = rs.getString("customerID");
-                    String fullName = rs.getString("fullname");
-                    int phoneNumber = rs.getInt("phoneNumber");
-                    String address = rs.getString("address");
-                    cusList.add(new CustomerDTO(customerID, fullName, phoneNumber, address)) ;
+                    String storeID = rs.getString("storeID");
+                    Date itemSendingDate = rs.getDate("itemSendingDate");
+                    Date itemGettingDate = rs.getDate("itemGettingDate");
+                    boolean statusID = rs.getBoolean("statusID");
+                    itemList.add(new ItemDTO(itemID, itemName, itemPic, customerID, storeID, itemSendingDate, itemGettingDate, statusID));
                 }
             }
         } finally {
@@ -56,6 +62,6 @@ public class CustomerDAO {
                 con.close();
             }
         }
-        return cusList;
+        return itemList;
     }
 }

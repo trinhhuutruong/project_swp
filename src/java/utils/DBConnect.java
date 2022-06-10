@@ -15,15 +15,12 @@ import java.sql.SQLException;
  */
 public class DBConnect {
 
-    public static Connection makeConnection(){
-        try {
-            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String sql = "jbdc:sqlserver://localhost:1433;databaseName=Q_ANT";
-            Connection con = DriverManager.getConnection(sql, "sa", "123456");
-            return con;
-        } catch (SQLException | ClassNotFoundException e){
-            e.printStackTrace();
-        }
-            return null;
-        }
+    public static Connection makeConnection() throws SQLException, ClassNotFoundException {
+        Connection con = null;
+
+        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        String sql = "jdbc:sqlserver://localhost:1433;databaseName=Q_ANT";
+        con = DriverManager.getConnection(sql, "sa", "123456");
+        return con;
     }
+}

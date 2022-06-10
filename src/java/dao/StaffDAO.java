@@ -24,7 +24,7 @@ public class StaffDAO {
     private final String CREATE = "INSERT INTO tblStaff (staffID,password,fullName,storeID) values (?, ?, ?, ?);";
     private final String UPDATE = "UPDATE tblStaff set password = ?, fullName = ? , storeID = ? WHERE staffID = ? ;";
     private final String DELETE = "DELETE FROM tblStaff WHERE staffID = ? ";
-    public boolean createStaff(String id, String password, String fullName, String storeID) throws SQLException {
+    public boolean createStaff(String id, String password, String fullName, String storeID) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
@@ -48,7 +48,7 @@ public class StaffDAO {
         return false;
     }
 
-    public StaffDTO viewStaff(String id) throws SQLException {
+    public StaffDTO viewStaff(String id) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
@@ -77,7 +77,7 @@ public class StaffDAO {
         return null;
     }
 
-    public boolean updateStaff(String id, String password, String fullName, String storeID) throws SQLException {
+    public boolean updateStaff(String id, String password, String fullName, String storeID) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
@@ -101,7 +101,7 @@ public class StaffDAO {
         return false;
     }
     
-    public boolean deleteStaff(String id) throws SQLException{
+    public boolean deleteStaff(String id) throws SQLException, ClassNotFoundException{
         try{
             con=DBConnect.makeConnection();
             if(con!=null){

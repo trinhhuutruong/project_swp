@@ -15,14 +15,14 @@ import java.sql.Date;
 public class ItemDTO {
     int itemID;
     String itemName;
-    File itemPic;
+    String itemPic;
     String customeID;
     String storeID;
-     Date itemSendingDate;
-     Date itemGettingDate;
+    Date itemSendingDate;
+    Date itemGettingDate;
    boolean status;
 
-    public ItemDTO(int itemID, String itemName, File itemPic, String customeID, String storeID, Date itemSendingDate, Date itemGettingDate, boolean status) {
+    public ItemDTO(int itemID, String itemName, String itemPic, String customeID, String storeID, Date itemSendingDate, Date itemGettingDate, boolean status) {
         this.itemID = itemID;
         this.itemName = itemName;
         this.itemPic = itemPic;
@@ -60,11 +60,11 @@ public class ItemDTO {
         this.itemName = itemName;
     }
 
-    public File getItemPic() {
+    public String getItemPic() {
         return itemPic;
     }
 
-    public void setItemPic(File itemPic) {
+    public void setItemPic(String itemPic) {
         this.itemPic = itemPic;
     }
 

@@ -26,7 +26,7 @@ public class PawnShopDAO {
     private final String UPDATE = "UPDATE tblPawnShop set storeName = ?, storeAddress = ?, phoneNumber = ?, managerID = ?  WHERE storeID = ?;";
     private final String DELETE = "DELETE FROM tblPawnShop WHERE storeID = ? ";
 
-    public boolean createPawnShop(String storeID, String storeName, String storeAddress, int phoneNumber, String managerID, String confirmKey) throws SQLException {
+    public boolean createPawnShop(String storeID, String storeName, String storeAddress, int phoneNumber, String managerID, String confirmKey) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
@@ -52,7 +52,7 @@ public class PawnShopDAO {
         return false;
     }
 
-    public PawnShopDTO viewPawnShop(String id) throws SQLException {
+    public PawnShopDTO viewPawnShop(String id) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
@@ -83,7 +83,7 @@ public class PawnShopDAO {
         return null;
     }
 
-    public boolean updatePawnShop(String storeID, String storeName, String storeAddress, int phoneNumber, String managerID) throws SQLException {
+    public boolean updatePawnShop(String storeID, String storeName, String storeAddress, int phoneNumber, String managerID) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
@@ -108,7 +108,7 @@ public class PawnShopDAO {
         return false;
     }
 
-    public boolean deleteStaff(String id) throws SQLException {
+    public boolean deleteStaff(String id) throws SQLException, ClassNotFoundException {
         try {
             con = DBConnect.makeConnection();
             if (con != null) {
