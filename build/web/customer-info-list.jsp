@@ -130,6 +130,7 @@
                                 <div class="card-body">
                                     <div id ="header_title_table">
                                         <h4 class="card-title">Thông tin khách hàng</h4>
+                                        <a herf="item-info-list.jsp"><input id="create_customer" type="submit" name="action" value="Thông tin khách hàng"/></a>
                                     </div>
                                     <div class="table-responsive">
                                         <%
