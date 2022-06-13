@@ -1,0 +1,22 @@
+SMAP
+customer_002dinfo_002dlist_jsp.java
+JSP
+*S JSP
+*F
++ 0 customer-info-list.jsp
+customer-info-list.jsp
+*L
+5,132:47
+137,4:180
+140,14:184
+154,2:199
+155,3:201
+158,4:204,3
+162:216
+163,4:217,3
+167,4:229
+171:233,3
+172,13:236
+185:249,3
+186,46:252
+*E
